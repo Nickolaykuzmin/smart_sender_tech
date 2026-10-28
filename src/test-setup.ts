@@ -1,6 +1,5 @@
 import { vi } from 'vitest'
 
-// Node 22+ has its own broken localStorage, so use a simple in-memory one.
 const store = new Map<string, string>()
 vi.stubGlobal('localStorage', {
   getItem: (key: string) => store.get(key) ?? null,
