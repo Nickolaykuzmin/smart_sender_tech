@@ -39,7 +39,6 @@ export function createHandlers() {
     created_at: new Date(Date.UTC(2024, 0, i + 1)).toISOString(),
   }))
 
-  // Like an HttpOnly cookie: the client never sees the session.
   const deviceTokens = new Map<string, string>() // token -> fingerprint
   let session: { fingerprint: string; expiresAt: number } | null = null
 
